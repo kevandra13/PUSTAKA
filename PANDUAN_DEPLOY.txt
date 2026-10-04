@@ -1,0 +1,24 @@
+PUSTAKA STAN — PAKET WEBSITE RESPONSIF FINAL
+
+1. Ekstrak ZIP. Semua file langsung berada di root; tidak ada folder bertingkat.
+2. Siapkan Supabase menggunakan paket PUSTAKA_STAN_Supabase.zip dan panduannya.
+3. Isi url dan publishableKey pada config.js. Jangan masukkan service_role/secret key.
+4. Upload SEMUA file ke root repositori, lalu import ke Vercel.
+   Preset: Other. Build command: kosong. Output directory: .
+   Alternatif: Vercel CLI dari folder yang langsung berisi index.html.
+5. Sesuaikan SITE_ORIGINS pada Edge Function dengan URL Vercel Anda.
+6. Buka URL HTTPS tersebut di desktop, laptop, HP, atau iPad.
+
+Data/notifikasi diperbarui sekitar 8 detik sekali saat tab aktif, setelah Supabase tersambung.
+HTML terpisah PUSTAKA_STAN_Responsif.html adalah demo lokal untuk melihat tampilan;
+akun dan transaksi demo tidak otomatis diimpor ke Supabase.
+
+Gambar/audio dipisah untuk cache; jangan hapus atau pindahkan asset-NNN.*.
+Pop-up memakai latar ringan tanpa blur. Palet dan kualitas sampul dipertahankan.
+Lag pada perangkat tertentu tetap perlu diuji langsung; belum diuji pada ThinkPad pengguna.
+Rekening/QRIS adalah tujuan contoh untuk UAS, bukan rekening resmi perpustakaan.
+
+Pengingat anggota: H-1, hari jatuh tempo, dan keterlambatan.
+Tombol Google Calendar / unduh .ics tersedia pada pinjaman dan riwayat.
+Pilih akun kalender Anda lalu simpan jadwal dan atur notifikasinya.
+Kalender pribadi tidak diperbarui otomatis setelah buku dikembalikan.
