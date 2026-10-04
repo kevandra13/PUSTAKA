@@ -42,7 +42,7 @@
  const rpc=(name,body={})=>request('/rest/v1/rpc/'+name,body);
  function apply(x,paint=true){
   if(!x?.session||!['member','officer','admin'].includes(x.session.role))throw Error('Akun tidak memiliki peran layanan yang valid.');
-  db=Object.assign(structuredClone(empty),x);revision=x.revision;role=x.session.role;currentMember=x.session.member||'';WHO[role]=x.session.name;
+  db=Object.assign(structuredClone(empty),x);for(const key of ['members','books','copies','loans','requests','rooms','reservations','losses','invoices','payments','bank','reversals','feedback','arrivals','accounts'])if(Array.isArray(db[key]))db[key]=orderedRecords(db[key]);revision=x.revision;role=x.session.role;currentMember=x.session.member||'';WHO[role]=x.session.name;
   for(const [k,v] of [['role',role],['member',currentMember],['name',x.session.name],['email',x.session.email]])sessionStorage.setItem('pustaka-'+k+'-ios-v3',v);
   if(!selectedMember||!member(selectedMember))selectedMember=currentMember||db.members[0]?.id||'';
   if(!db.books.some(b=>b.id===selectedBook))selectedBook=db.books[0]?.id||'';
